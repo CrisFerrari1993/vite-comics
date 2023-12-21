@@ -67,6 +67,15 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $light;
+}
+
 main {
     background-color: #1c1c1c;
     padding: 2rem 0;
