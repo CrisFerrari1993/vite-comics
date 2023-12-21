@@ -1,6 +1,62 @@
 <script>
 export default {
     name: 'AppHeader',
+    data() {
+        return {
+            links: [
+                {
+                    text: 'CHARACTERS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'COMICS',
+                    url: '#',
+                    current: true,
+                },
+                {
+                    text: 'MOVIES',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'TV',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'GAMES',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'COLLECTIBLES',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'VIDEOS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'FANS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'NEWS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'SHOP',
+                    url: '#',
+                    current: false,
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -9,9 +65,9 @@ export default {
         <div class="container">
             <img src="../assets/img/dc-logo.png" alt="">
             <ul>
-                <li>
-                    <a class="active" href="">
-                        Prova
+                <li v-for="link in links">
+                    <a :class="link.current ? 'active' : ''" :href="link.url">
+                        {{ link.text }}
                     </a>
                 </li>
             </ul>
@@ -28,6 +84,10 @@ export default {
     display: flex;
     justify-content: space-between;
 
+    img {
+        padding: 1rem;
+    }
+
     ul {
         list-style: none;
         @include center();
@@ -35,15 +95,16 @@ export default {
 
         li a {
             display: inline-block;
-            padding: 2.5rem 1rem;
+            padding: 3.5rem 1rem;
             text-decoration: none;
             font-weight: 600;
+            color: $grey;
 
 
             &.active,
             &:hover {
-                border-bottom: 3px solid #0282f9;
-                color: #0282f9;
+                border-bottom: 3px solid $primary;
+                color: $primary;
             }
         }
     }
