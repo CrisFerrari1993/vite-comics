@@ -95,7 +95,7 @@ export default {
 
         li a {
             display: inline-block;
-            padding: 3.5rem 1rem;
+            padding: 3.5rem 0.5rem;
             text-decoration: none;
             font-weight: 600;
             color: $grey;
