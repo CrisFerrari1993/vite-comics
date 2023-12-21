@@ -6,23 +6,33 @@ export default {
             cards: [
                 {
                     text: 'DIGITAL COMICS',
-                    img: '../assets/img/card/buy-comics-digital-comics.png'
+                    img: 'public/img/card/buy-comics-digital-comics.png',
+                    url: '#',
+                    current: true,
                 },
                 {
                     text: 'DC MERCHANDISE',
-                    img: '../assets/img/card/buy-comics-digital-comics.png'
+                    img: 'public/img/card/buy-comics-merchandise.png',
+                    url: '#',
+                    current: false,
                 },
                 {
                     text: 'SUBSCRIPTION',
-                    img: '../assets/img/card/buy-comics-digital-comics.png'
+                    img: 'public/img/card/buy-comics-shop-locator.png',
+                    url: '#',
+                    current: false,
                 },
                 {
                     text: 'COMIC SHOP LOCATOR',
-                    img: '../assets/img/card/buy-comics-digital-comics.png'
+                    img: 'public/img/card/buy-comics-subscriptions.png',
+                    url: '#',
+                    current: false,
                 },
                 {
                     text: 'DC POWER VISA',
-                    img: '../assets/img/card/buy-comics-digital-comics.png'
+                    img: 'public/img/card/buy-dc-power-visa.svg',
+                    url: '#',
+                    current: false,
                 }
             ]
         }
@@ -41,10 +51,12 @@ export default {
     <section>
         <div class="container">
             <ul>
-                <li>
-                    <a href="">
-                        <img :src="cards.img" alt="">
-                        prova
+                <li v-for="card in cards">
+                    <a :href="card.url">
+                        <div class="img-container">
+                            <img :src="card.img" alt="">
+                        </div>
+                        <span>{{ card.text }}</span>
                     </a>
                 </li>
             </ul>
@@ -69,20 +81,28 @@ section {
     ul {
         list-style: none;
         @include center();
+        padding: 1rem 0;
 
 
         li a {
-            display: inline-block;
-            padding: 3.5rem 1rem;
+            margin: 2rem 3rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
             text-decoration: none;
             font-weight: 600;
             color: $light;
 
+            img {
+                max-width: 100%;
+            }
 
             &.active,
             &:hover {
                 color: $grey;
             }
+
+
         }
     }
 }
