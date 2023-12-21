@@ -63,7 +63,7 @@ export default {
 <template>
     <header>
         <div class="container">
-            <img src="../assets/img/dc-logo.png" alt="">
+            <img src="../../public/img/dc-logo.png" alt="">
             <ul>
                 <li v-for="link in links">
                     <a :class="link.current ? 'active' : ''" :href="link.url">
