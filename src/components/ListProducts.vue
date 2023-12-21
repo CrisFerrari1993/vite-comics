@@ -53,9 +53,7 @@ export default {
             <ul>
                 <li v-for="card in cards">
                     <a :href="card.url">
-                        <div class="img-container">
-                            <img :src="card.img" alt="">
-                        </div>
+                        <img :src="card.img" alt="">
                         <span>{{ card.text }}</span>
                     </a>
                 </li>
@@ -76,33 +74,34 @@ main {
 
 section {
     background-color: #0282f9;
-    padding: 2rem 0;
 
     ul {
+
         list-style: none;
         @include center();
-        padding: 1rem 0;
+        display: flex;
+        width: 100%;
 
+        li {
+            width: calc(100% / 5);
+            height: fit-content;
+
+        }
 
         li a {
-            margin: 2rem 3rem;
+            padding: 1rem;
             display: flex;
             align-items: center;
             flex-wrap: nowrap;
             text-decoration: none;
             font-weight: 600;
             color: $light;
+            @include center();
 
             img {
-                max-width: 100%;
+                max-width: 30%;
+                margin-right: 10px;
             }
-
-            &.active,
-            &:hover {
-                color: $grey;
-            }
-
-
         }
     }
 }
