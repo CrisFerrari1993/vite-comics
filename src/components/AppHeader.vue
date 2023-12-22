@@ -101,7 +101,7 @@ export default {
 
             &.active,
             &:hover {
-                border-bottom: 3px solid $primary;
+                border-bottom: 5px solid $primary;
                 color: $primary;
             }
         }

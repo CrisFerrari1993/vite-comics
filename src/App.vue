@@ -17,9 +17,7 @@ export default {
   <main>
     <ListProducts />
   </main>
-  <footer>
-    <AppFooter />
-  </footer>
+  <AppFooter />
 </template>
 
 <style lang="scss">
