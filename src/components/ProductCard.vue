@@ -10,7 +10,7 @@ export default {
 <template>
     <div class="col">
         <a href="">
-            <img :src="details.thumb" :alt="details.series">
+            <img class="fill" :src="details.thumb" :alt="details.series">
             <h6>{{ details.series }}</h6>
         </a>
     </div>
@@ -30,8 +30,14 @@ export default {
         text-decoration: none;
 
         img {
-            height: 200px;
+            height: 250px;
+            width: 200px;
+
+            &.fill {
+                object-fit: contain;
+            }
         }
+
 
         h6 {
             margin: 1rem 0;
