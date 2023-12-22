@@ -41,11 +41,20 @@ export default {
 </script>
 
 <template>
+    <section id="jumbotron">
+        <img class="fill" src="../../public/img/jumbotron.jpg" alt="">
+    </section>
     <main>
         <div class="container">
-            <h1>
-                __> Content goes here &lt;__
-            </h1>
+            <!-- __> Content goes here &lt;__ -->
+            <div class="btn">
+                <h3>CURRENT SERIES</h3>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Prova
+                </div>
+            </div>
         </div>
     </main>
     <section>
@@ -79,11 +88,33 @@ h6 {
 main {
     background-color: #1c1c1c;
     padding: 2rem 0;
+
+    .btn {
+        background-color: #0282f9;
+        width: fit-content;
+        padding: 1rem 0.5rem;
+        position: relative;
+        bottom: 4rem;
+    }
 }
 
 section {
     background-color: #0282f9;
 
+    &#jumbotron {
+        background-color: #1c1c1c;
+
+
+        img {
+            width: 100%;
+            height: 500px;
+
+            &.fill {
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
 
 
     ul {
