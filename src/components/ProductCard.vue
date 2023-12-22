@@ -24,17 +24,17 @@ export default {
 .col {
     width: calc((100% / 6) - 1rem);
     margin: 0.5rem;
-    text-align: center;
+
 
     a {
         text-decoration: none;
 
         img {
-            height: 250px;
-            width: 200px;
+            height: 300px;
+            width: 275;
 
             &.fill {
-                object-fit: contain;
+                object-fit: cover;
             }
         }
 
@@ -42,6 +42,7 @@ export default {
         h6 {
             margin: 1rem 0;
             color: $light;
+            text-align: left;
         }
     }
 
