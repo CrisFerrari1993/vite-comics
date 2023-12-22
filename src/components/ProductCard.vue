@@ -30,8 +30,8 @@ export default {
         text-decoration: none;
 
         img {
-            height: 300px;
-            width: 275;
+            height: 275px;
+            width: 245px;
 
             &.fill {
                 object-fit: cover;
