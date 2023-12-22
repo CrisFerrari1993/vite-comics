@@ -30,11 +30,11 @@ export default {
         text-decoration: none;
 
         img {
-            height: 275px;
-            width: 245px;
+            height: 300px;
+            width: 200px;
 
             &.fill {
-                object-fit: cover;
+                object-fit: fill;
             }
         }
 

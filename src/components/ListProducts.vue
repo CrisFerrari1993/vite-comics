@@ -132,6 +132,11 @@ export default {
                 <!-- codice componente card prodotto -->
                 <ProductCard v-for="(product, idx) in products" :key="idx" :details="product" />
             </div>
+            <div class="btn center">
+                <h3>
+                    <a href="">LOAD MORE</a>
+                </h3>
+            </div>
         </div>
     </main>
     <section>
@@ -178,6 +183,25 @@ main {
         padding: 1rem 0.5rem;
         position: relative;
         bottom: 4rem;
+
+        &.center {
+            bottom: 0;
+            margin: 0 auto;
+
+            h3 {
+                font-size: 1rem;
+
+                a {
+                    color: $light;
+                    text-decoration: none;
+                }
+
+            }
+
+            &:hover {
+                background-color: #558cc0;
+            }
+        }
     }
 }
 
