@@ -84,6 +84,8 @@ main {
 section {
     background-color: #0282f9;
 
+
+
     ul {
 
         list-style: none;
@@ -101,6 +103,7 @@ section {
             padding: 1rem;
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-wrap: nowrap;
             text-decoration: none;
             font-weight: 600;
